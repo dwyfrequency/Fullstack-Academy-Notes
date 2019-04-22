@@ -14,7 +14,9 @@ Git, HTML & CSS, DOM & Events - Vanilla Js
 
   - [📖 Git Basics](https://git-scm.com/book/en/v2/Getting-Started-Git-Basics)
 
-- Takeaways:
+- Notes:
+
+* Takeaways:
 
 #### Day 2: HTML & CSS, Debugging
 
@@ -26,7 +28,9 @@ Git, HTML & CSS, DOM & Events - Vanilla Js
   _ [📖 Calculate Specificity v2](https://css-tricks.com/specifics-on-css-specificity/)
   _ [📖 REM vs EM vs PX](https://engageinteractive.co.uk/blog/em-vs-rem-vs-px) \* [📖 CSS Units Ultimate Guide](https://blog.alexdevero.com/css-units-ultimate-guide/)
 
-- Takeaways:
+- Notes:
+
+* Takeaways:
 
 #### Day 3: DOM and Events
 
@@ -43,11 +47,31 @@ Git, HTML & CSS, DOM & Events - Vanilla Js
 
 #### Day 4: Pixelate, Trackr
 
-- Takeaways:
+- Notes:
+
+* Takeaways:
 
 #### Day 5: Conway's Game of Life
 
-- Takeaways:
+- Notes:
+
+* Takeaways:
+  Struggled with the neighbor algo and the step function.
+
+#### Weekend 1: Fitness Tracker and Pixelate
+
+- Notes:
+  I completed the checkpoint for the fitness tracker. The fitness tracker used flexbox and vanilla js. At first for the tracker, I had a giant func to calc analytics for the sidebar. Then, I broke it down into multiple tiny functions. I didnt write any tests for it. In the future, I'm going to try and do more test driven development
+
+  Next, I tried to redo the [pixelate project](https://github.com/dwyfrequency/Reactive-Pixel-Board) in react. I created a monolith component App using hooks. I had an issue with the design of the component. Should I break it down into multiple. How do I handle the functions to paint all the cells, and paint the remaining. I found the project to be easy when down with vanilla js, but incredibly difficult with react. >>
+
+  - Issues with pixelate:
+    - what should i componentize?
+    - do i need to employ useEffect?
+    - what should i maintain in the state?
+    - how should i dynamically update each cell without rerending the whole board and losing the styling?
+
+* Takeaways
 
 ### Week 2
 
