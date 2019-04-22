@@ -82,6 +82,9 @@ Node, Express, Sequelize
 
 - Reading:
   - [📖 What Exactly is Node.js](https://medium.freecodecamp.org/what-exactly-is-node-js-ae36e97449f5)
+    - Node:
+      - lets us write javascript on the server. It uses the V8 engine to compile our js to machine code.
   - [📖 A Simple Explanation of Express Middleware](https://medium.com/@agoiabeladeyemi/a-simple-explanation-of-express-middleware-c68ea839f498)
+    - ## Middleware:
 
 Takeaways:
