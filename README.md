@@ -75,6 +75,7 @@ Git, HTML & CSS, DOM & Events - Vanilla Js
     - how should i dynamically update each cell without re-rending the whole board and losing the styling?
 
 - Takeaways:
+
   I need to focus on component design, understanding the useEffect hook and its use cases, what warrants being in state.
 
 ### Week 2
@@ -86,8 +87,6 @@ Node, Express, Sequelize
 - Reading:
 
   - [📖 What Exactly is Node.js](https://medium.freecodecamp.org/what-exactly-is-node-js-ae36e97449f5)
-    - Node:
-      - lets us write javascript on the server. It uses the V8 engine to compile our js to machine code.
   - [📖 A Simple Explanation of Express Middleware](https://medium.com/@agoiabeladeyemi/a-simple-explanation-of-express-middleware-c68ea839f498)
     - ## Middleware:
 
@@ -95,5 +94,13 @@ Node, Express, Sequelize
 
   - async code: code that may take a variable amount of time.
     - Example Use Case: query a db.
+  - Node: lets us write javascript on the server. It uses the V8 engine to compile our js to machine code. Allows for new environments for our javascript aside from the browser.
+    - when typing node keyword on our command line, it takes the js code creates a node process
+  - Node module: file/library of js code that runs specifically in the node ecosystem. Allows for separation of concerns
+    - when importing a module in node, we use `require`. If we specify, a relative path `./` it knows it's a package we wrote. If it just has the package name, it's in our node_modules
+  - server: program that listen to requests and provides a response.
+    - Why create one?
+  - Program vs Process
+    - we are going to be writing programs that will be turned into node processes
 
-- Takeaways:
+* Takeaways:
