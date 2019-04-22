@@ -56,16 +56,19 @@ Git, HTML & CSS, DOM & Events - Vanilla Js
 - Notes:
 
 * Takeaways:
+
   Struggled with the neighbor algo and the step function.
 
 #### Weekend 1: Fitness Tracker and Pixelate
 
 - Notes:
+
   I completed the checkpoint for the fitness tracker. The fitness tracker used flexbox and vanilla js. At first for the tracker, I had a giant func to calc analytics for the sidebar. Then, I broke it down into multiple tiny functions. I didnt write any tests for it. In the future, I'm going to try and do more test driven development
 
   Next, I tried to redo the [pixelate project](https://github.com/dwyfrequency/Reactive-Pixel-Board) in react. I created a monolith component App using hooks. I had an issue with the design of the component. Should I break it down into multiple. How do I handle the functions to paint all the cells, and paint the remaining. I found the project to be easy when down with vanilla js, but incredibly difficult with react.
 
   - Issues with pixelate:
+
     - what should i componentize?
     - do i need to employ useEffect?
     - what should i maintain in the state?
@@ -81,10 +84,16 @@ Node, Express, Sequelize
 #### Day 1: Intro to Node & Express
 
 - Reading:
+
   - [📖 What Exactly is Node.js](https://medium.freecodecamp.org/what-exactly-is-node-js-ae36e97449f5)
     - Node:
       - lets us write javascript on the server. It uses the V8 engine to compile our js to machine code.
   - [📖 A Simple Explanation of Express Middleware](https://medium.com/@agoiabeladeyemi/a-simple-explanation-of-express-middleware-c68ea839f498)
     - ## Middleware:
 
-Takeaways:
+- Notes:
+
+  - async code: code that may take a variable amount of time.
+    - Example Use Case: query a db.
+
+- Takeaways:
