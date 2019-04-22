@@ -21,12 +21,13 @@ Git, HTML & CSS, DOM & Events - Vanilla Js
 #### Day 2: HTML & CSS, Debugging
 
 - Reading:
-  _ [📖 HTML Basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics)
-  _ [📖 What is the DOM?](https://css-tricks.com/dom/)
-  _ [📖 CSS Basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics)
-  _ [📖 Calculate Specificity](https://slicejack.com/quick-guide-to-css-specificity/)
-  _ [📖 Calculate Specificity v2](https://css-tricks.com/specifics-on-css-specificity/)
-  _ [📖 REM vs EM vs PX](https://engageinteractive.co.uk/blog/em-vs-rem-vs-px) \* [📖 CSS Units Ultimate Guide](https://blog.alexdevero.com/css-units-ultimate-guide/)
+
+  - [📖 HTML Basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics)
+  - [📖 What is the DOM?](https://css-tricks.com/dom/)
+  - [📖 CSS Basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics)
+  - [📖 Calculate Specificity](https://slicejack.com/quick-guide-to-css-specificity/)
+  - [📖 Calculate Specificity v2](https://css-tricks.com/specifics-on-css-specificity/)
+  - [📖 REM vs EM vs PX](https://engageinteractive.co.uk/blog/em-vs-rem-vs-px) \* [📖 CSS Units Ultimate Guide](https://blog.alexdevero.com/css-units-ultimate-guide/)
 
 - Notes:
 
@@ -38,12 +39,12 @@ Git, HTML & CSS, DOM & Events - Vanilla Js
   - Events
     - [📖 An Intruction to DOM Events](https://www.smashingmagazine.com/2013/11/an-introduction-to-dom-events/)
   - CSS
-    _ [CSS Grow](https://css-tricks.com/flex-grow-is-weird/)
-    _ [CSS Center](https://css-tricks.com/centering-css-complete-guide/)
+    - [CSS Grow](https://css-tricks.com/flex-grow-is-weird/)
+    - [CSS Center](https://css-tricks.com/centering-css-complete-guide/)
     - [Colorful Flexbox](https://medium.freecodecamp.org/even-more-about-how-flexbox-works-explained-in-big-colorful-animated-gifs-a5a74812b053)
   - Dom Datatypes
-    _ [HTML Collection vs NodeList](https://teamtreehouse.com/community/understanding-the-difference-between-an-htmlcollection-and-a-nodelist)
-    _ [NodeList Doc](https://developer.mozilla.org/en-US/docs/Web/API/NodeList)
+    - [HTML Collection vs NodeList](https://teamtreehouse.com/community/understanding-the-difference-between-an-htmlcollection-and-a-nodelist)
+    - [NodeList Doc](https://developer.mozilla.org/en-US/docs/Web/API/NodeList)
 
 #### Day 4: Pixelate, Trackr
 
@@ -92,16 +93,23 @@ Node, Express, Sequelize
 
 - Notes:
 
-  - async code: code that may take a variable amount of time.
-    - Example Use Case: query a db.
   - Node: lets us write javascript on the server. It uses the V8 engine to compile our js to machine code. Allows for new environments for our javascript aside from the browser.
     - when typing node keyword on our command line, it takes the js code creates a node process
   - Node module: file/library of js code that runs specifically in the node ecosystem. Allows for separation of concerns
-    - when importing a module in node, we use `require`. If we specify, a relative path `./` it knows it's a package we wrote. If it just has the package name, it's in our node_modules
-    - when exporting, we use `module.exports =` and assign it a value.
-  - server: program that listen to requests and provides a response.
-    - Why create one?
-  - Program vs Process
-    - we are going to be writing programs that will be turned into node processes
+    - each file represents a module
+    - a module has its own "global" object called "module" (similar to window in the browser, except each module has its own unique module)
+      - each module has a property called "exports" (`module.exports`) using a special func called `require`
+  - async code: code that may take a variable amount of time.
+
+  - Example Use Case: query a db.
+
+  - when importing a module in node, we use `require`. If we specify, a relative path `./` it knows it's a package we wrote. If it just has the package name, it's in our node_modules
+  - module: packaging of reusable code
+  - when exporting, we use `module.exports =` and assign it a value.
+
+- server: program that listen to requests and provides a response.
+  - Why create one?
+- Program vs Process
+  - we are going to be writing programs that will be turned into node processes
 
 * Takeaways:
