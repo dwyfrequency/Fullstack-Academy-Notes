@@ -95,21 +95,41 @@ Node, Express, Sequelize
 
   - Node: lets us write javascript on the server. It uses the V8 engine to compile our js to machine code. Allows for new environments for our javascript aside from the browser.
     - when typing node keyword on our command line, it takes the js code creates a node process
-  - Node module: file/library of js code that runs specifically in the node ecosystem. Allows for separation of concerns
-    - each file represents a module
-    - a module has its own "global" object called "module" (similar to window in the browser, except each module has its own unique module)
+    - Node modules: file/library of js code that runs specifically in the node ecosystem. Allows for separation of concerns
+      - each file represents a module
+      - a module has its own "global" object called "module" (similar to window in the browser, except each module has its own unique module)
       - each module has a property called "exports" (`module.exports`) using a special func called `require`
-  - async code: code that may take a variable amount of time.
-
-  - Example Use Case: query a db.
-
-  - when importing a module in node, we use `require`. If we specify, a relative path `./` it knows it's a package we wrote. If it just has the package name, it's in our node_modules
-  - module: packaging of reusable code
-  - when exporting, we use `module.exports =` and assign it a value.
-
-- server: program that listen to requests and provides a response.
-  - Why create one?
-- Program vs Process
-  - we are going to be writing programs that will be turned into node processes
+      - when importing a module in node, we use `require`. If we specify, a relative path `./` it knows it's a package we wrote. If it just has the package name, it's in our node_modules
+      - module: packaging of reusable code
+      - when exporting, we use `module.exports =` and assign it a value.
+  - server: program that listen to requests and provides a response.
+    - Why create one?
+  - Program vs Process:
+    - we are going to be writing programs that will be turned into node processes
+  - asynchronicity:
+    - async code: code that may take a variable amount of time. (code is asynchronous if) the execution order is not dependent upon the command order
+    - Example Use Case: query a db.
+  - concurrency types:
+    - single threaded blocking
+    - single threaded non-blocking
+    - multithreaded
+  - Event loop:
+    - stack and queue
+      - stack: LIFO, last item added is the first one removed. think stack of dishes, we wash the one on top
+      - queue: FIFO, first item added is the first to be removed.
+    - will need to provide a picture of this
+  - Express:
+    - wrapper over the built in http node library. Makes it even easier to write and maitain
+    - express route handlers two params
+      1. endpoint
+      2. callback (req, res, next)
+  - Http:
+    - HTTP Verbs: Get, Post, Put, Delete
+      - Get: retrieve data
+      - Post: add new data
+      - Put: update existing data
+      - Delete: delete existing data
+  - REST (Representational State Transfer) APIs
+    - apis take a url query string and returns a response
 
 * Takeaways:
