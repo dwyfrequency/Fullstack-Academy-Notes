@@ -98,6 +98,7 @@ Node, Express, Sequelize
     - when typing node keyword on our command line, it takes the js code creates a node process
   - Node module: file/library of js code that runs specifically in the node ecosystem. Allows for separation of concerns
     - when importing a module in node, we use `require`. If we specify, a relative path `./` it knows it's a package we wrote. If it just has the package name, it's in our node_modules
+    - when exporting, we use `module.exports =` and assign it a value.
   - server: program that listen to requests and provides a response.
     - Why create one?
   - Program vs Process
