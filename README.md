@@ -132,4 +132,23 @@ Node, Express, Sequelize
   - REST (Representational State Transfer) APIs
     - apis take a url query string and returns a response
 
+- Takeaways:
+
+#### Day 2: Databases & SQL
+
+- Reading:
+
+  - [📖 Schema Design Overview](https://medium.com/@kimtnguyen/relational-database-schema-design-overview-70e447ff66f9)
+  - [📖 SQL W3schools](https://www.w3schools.com/sql/sql_intro.asp) \* [📖 What is a RDBMS anyway?](https://www.codecademy.com/articles/what-is-rdbms-sql)
+
+- Notes:
+
+  - SQL (Structured Query Language) - allows us to write declarative code to access DB - SQL Syntax: - JOIN: allows us to combine tables passed on a condition
+    ```
+    SELECT Students.ID, Name, Street, Zip, City
+      FROM Students
+    JOIN Addresses
+      ON Students.Address = Addresses.ID
+    ```
+
 * Takeaways:
