@@ -156,3 +156,5 @@ Node, Express, Sequelize
     ```
 
 * Takeaways:
+
+  - Didnt do a great job of focussing on the lectures. I dealing with a few pesky react issues that side tracked me :(
