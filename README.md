@@ -143,7 +143,11 @@ Node, Express, Sequelize
 
 - Notes:
 
-  - SQL (Structured Query Language) - allows us to write declarative code to access DB - SQL Syntax: - JOIN: allows us to combine tables passed on a condition
+  - RMDB: relational database management system
+    - We use POSTGRES with tool postico.
+      - postico lets us have a nice gui to setup tables and query the db so we dont need to use the cli
+  - ## SQL (Structured Query Language) - allows us to write declarative code to access DB. Used to create/read/update/delete (crud) data
+  - SQL Syntax: - JOIN: allows us to combine tables passed on a condition
     ```
     SELECT Students.ID, Name, Street, Zip, City
       FROM Students
