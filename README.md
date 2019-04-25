@@ -194,7 +194,7 @@ Node, Express, Sequelize
     - `app.use(express.urlencoded({ extended: false }));` when to use this vs the json encoded version.
 
 - Takeaways:
-  - review solutions code for wizards 3. I struggled with the database interactions \ - specifically chaining inserts with select statements.
+  - review solutions code for wizards 3. I struggled with the database interactions <br /> - specifically chaining inserts with select statements.
 
 #### Day 4: ORM & WikiStack 1
 
