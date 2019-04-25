@@ -155,6 +155,36 @@ Node, Express, Sequelize
       ON Students.Address = Addresses.ID
     ```
 
-* Takeaways:
+- Takeaways:
 
   - Didnt do a great job of focussing on the lectures. I dealing with a few pesky react issues that side tracked me :(
+
+#### Day 3: Postgres & Express Routing
+
+- Reading:
+
+  - [async-await-slides]: 01-junior-phase/08-async-pg-express/async-await.pdf
+  - [node-postgres-slides]: 01-junior-phase/08-async-pg-express/node-postgres.pdf
+  - [restful-express-slides]: 01-junior-phase/08-async-pg-express/express-routes.pdf
+  - [node-postgres-video]: https://youtu.be/v3VF85twzrY
+  - [restful-routing-video]: https://youtu.be/_EdRU737ypE
+
+- Notes:
+  - Express:
+    - `express` is a web application framework that provides a robust set of features for web and mobile applications.
+    - `morgan` is our logger
+    - `body-parser` allows us to parse the data our client is sending either in body or url.
+    - `const app = express();` instantiates our express instance;
+    - `app.use`
+    - `app.use(express.static(__dirname + '/public'));` says treat this public folder as our root directory.
+    - `app.use(express.urlencoded({ extended: false }));` when to use this vs the json encoded version.
+
+* Takeaways:
+
+#### Day 4: ORM & WikiStack 1
+
+- Reading:
+
+- Notes:
+
+- Takeaways:
