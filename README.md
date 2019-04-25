@@ -170,6 +170,19 @@ Node, Express, Sequelize
   - [restful-routing-video]: https://youtu.be/_EdRU737ypE
 
 - Notes:
+
+  - async:
+
+    - `async` declares our function as asynch. `async () => {}`. This will always return a promise
+    - `await` is declared when receiving a value from an async func.
+      - ```
+        <!-- this example does not return 5 need to look into docs on what setTimeout returns -->
+        const func = async () => {
+          setTimeout(() => 5, 10)
+        }
+        const x = await func()
+        ```
+
   - Express:
     - `express` is a web application framework that provides a robust set of features for web and mobile applications.
     - `morgan` is our logger
