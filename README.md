@@ -154,6 +154,7 @@ Node, Express, Sequelize
     JOIN Addresses
       ON Students.Address = Addresses.ID
     ```
+  - node module `pg` connects our node app to our postgres db server.
 
 - Takeaways:
 
@@ -192,12 +193,17 @@ Node, Express, Sequelize
     - `app.use(express.static(__dirname + '/public'));` says treat this public folder as our root directory.
     - `app.use(express.urlencoded({ extended: false }));` when to use this vs the json encoded version.
 
-* Takeaways:
+- Takeaways:
+  - review solutions code for wizards 3. I struggled with the database interactions \ - specifically chaining inserts with select statements.
 
 #### Day 4: ORM & WikiStack 1
 
 - Reading:
 
 - Notes:
+
+  - ORM: Object Relational Map
+    - acts as a "bridge" between your code and RDBMS
+    - using ORM, data an be easily stored and retrieved from a database without writing SQL statements directly
 
 - Takeaways:
