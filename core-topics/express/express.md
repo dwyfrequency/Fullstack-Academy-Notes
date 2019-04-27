@@ -6,6 +6,10 @@
 
 - middleware is any function that is invoked by the Express.js before your final request handler is, and thus sits in the middle between a raw request and the final intended route.
   - `app.use(insert function here)` registers some function to run for each incoming request.
+- The order you place your middleware and routes is very important. Everything will happen in the order that they appear. This means that if you place your middleware after a route, then the route will happen before the middleware and the request will end there. Your middleware will not run at that point.
+- Get query parameters from client
+  `app.use(express.urlencoded({ extended: false }));` - parses url-encoded bodies
+  `app.use(express.json());` - parses json bodies
 
 ## Logging
 
@@ -27,3 +31,15 @@
 
 - `app.get( '/posts/:id', someFunction );`
 - The colon : is a trick that Express provides to define particular portions of the URI string as variables. In other words, in posts/:id, the :id portion can be anything. The variable and its value are stored on the req.params object.
+
+## Error Handling
+
+- Writing error handlers:
+  - Define error-handling middleware functions in the same way as other middleware functions, except error-handling functions have four arguments instead of three: (err, req, res, next). For example:
+  - Example:
+  ```
+  app.use(function (err, req, res, next) {
+  console.error(err.stack)
+  res.status(500).send('Something broke!')
+  })
+  ```
