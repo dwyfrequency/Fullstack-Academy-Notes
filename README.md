@@ -36,6 +36,7 @@ Git, HTML & CSS, DOM & Events - Vanilla Js
 #### Day 3: DOM and Events
 
 - Reading:
+
   - Events
     - [📖 An Intruction to DOM Events](https://www.smashingmagazine.com/2013/11/an-introduction-to-dom-events/)
   - CSS
@@ -93,9 +94,9 @@ Node, Express, Sequelize
 
 - Notes:
 
-  - Node: lets us write javascript on the server. It uses the V8 engine to compile our js to machine code. Allows for new environments for our javascript aside from the browser.
+  - Node: lets us write javascript on the server. It uses the V8 engine to compile<br /> our js to machine code. Allows for new environments for our javascript aside from the browser.
     - when typing node keyword on our command line, it takes the js code creates a node process
-    - Node modules: file/library of js code that runs specifically in the node ecosystem. Allows for separation of concerns
+    - Node modules: file/library of js code that runs specifically in the node <br /> ecosystem. Allows for separation of concerns
       - each file represents a module
       - a module has its own "global" object called "module" (similar to window in the browser, except each module has its own unique module)
       - each module has a property called "exports" (`module.exports`) using a special func called `require`
@@ -107,7 +108,7 @@ Node, Express, Sequelize
   - Program vs Process:
     - we are going to be writing programs that will be turned into node processes
   - asynchronicity:
-    - async code: code that may take a variable amount of time. (code is asynchronous if) the execution order is not dependent upon the command order
+    - async code: code that may take a variable amount of time. (code is asynchronous<br /> if) the execution order is not dependent upon the command order
     - Example Use Case: query a db.
   - concurrency types:
     - single threaded blocking
@@ -115,7 +116,7 @@ Node, Express, Sequelize
     - multithreaded
   - Event loop:
     - stack and queue
-      - stack: LIFO, last item added is the first one removed. think stack of dishes, we wash the one on top
+      - stack: LIFO, last item added is the first one removed. think stack of dishes,<br /> we wash the one on top
       - queue: FIFO, first item added is the first to be removed.
     - will need to provide a picture of this
   - Express:
@@ -139,14 +140,15 @@ Node, Express, Sequelize
 - Reading:
 
   - [📖 Schema Design Overview](https://medium.com/@kimtnguyen/relational-database-schema-design-overview-70e447ff66f9)
-  - [📖 SQL W3schools](https://www.w3schools.com/sql/sql_intro.asp) \* [📖 What is a RDBMS anyway?](https://www.codecademy.com/articles/what-is-rdbms-sql)
+  - [📖 SQL W3schools](https://www.w3schools.com/sql/sql_intro.asp)
+  - [📖 What is a RDBMS anyway?](https://www.codecademy.com/articles/what-is-rdbms-sql)
 
 - Notes:
 
   - RMDB: relational database management system
     - We use POSTGRES with tool postico.
-      - postico lets us have a nice gui to setup tables and query the db so we dont need to use the cli
-  - ## SQL (Structured Query Language) - allows us to write declarative code to access DB. Used to create/read/update/delete (crud) data
+      - postico lets us have a nice gui to setup tables and query the db so we <br /> dont need to use the cli
+  - ## SQL (Structured Query Language) - allows us to write declarative code to <br /> access DB. Used to create/read/update/delete (crud) data
   - SQL Syntax: - JOIN: allows us to combine tables passed on a condition
     ```
     SELECT Students.ID, Name, Street, Zip, City
@@ -174,7 +176,7 @@ Node, Express, Sequelize
 
   - async:
 
-    - `async` declares our function as asynch. `async () => {}`. This will always return a promise
+    - `async` declares our function as asynch. `async () => {}`. This will always<br /> return a promise
     - `await` is declared when receiving a value from an async func.
       - ```
         <!-- this example does not return 5 need to look into docs on what setTimeout returns -->
@@ -185,15 +187,16 @@ Node, Express, Sequelize
         ```
 
   - Express:
-    - `express` is a web application framework that provides a robust set of features for web and mobile applications.
+    - `express` is a web application framework that provides a robust set of features <br />for web and mobile applications.
     - `morgan` is our logger
     - `body-parser` allows us to parse the data our client is sending either in body or url.
     - `const app = express();` instantiates our express instance;
     - `app.use`
-    - `app.use(express.static(__dirname + '/public'));` says treat this public folder as our root directory.
+    - `app.use(express.static(__dirname + '/public'));` says treat this public <br /> folder as our root directory.
     - `app.use(express.urlencoded({ extended: false }));` when to use this vs the json encoded version.
 
 - Takeaways:
+
   - review solutions code for wizards 3. I struggled with the database interactions <br /> - specifically chaining inserts with select statements.
 
 #### Day 4: ORM & WikiStack 1
@@ -204,6 +207,22 @@ Node, Express, Sequelize
 
   - ORM: Object Relational Map
     - acts as a "bridge" between your code and RDBMS
-    - using ORM, data an be easily stored and retrieved from a database without writing SQL statements directly
+    - using ORM, data an be easily stored and retrieved from a database without writing SQL <br /> statements directly
+  - ## Sequelize is the ORM we'll be using. Gives us a more js way to interact with the database
+
+- Takeaways:
+
+#### Day 5: WikiStack 2
+
+- Reading:
+
+  - [Sequelize: Eager Loading](https://sequelize-guides.netlify.com/eager-loading/)
+  - [Sequelize: Instance & Class Methods](https://sequelize-guides.netlify.com/instance-and-class-methods/) \* [Express: Error Handling](https://expressjs.com/en/guide/error-handling.html)
+
+- Notes:
+
+  - Express Custom Error Handler:
+    - we can pass down errors with `next`
+  - Sequelize Rounding Out
 
 - Takeaways:
