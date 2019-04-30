@@ -10,6 +10,7 @@
 - Get query parameters from client
   `app.use(express.urlencoded({ extended: false }));` - parses url-encoded bodies
   `app.use(express.json());` - parses json bodies
+  ^ Now, every request body will be transformed into a body object and attached to the req object. So we can access body variables like req.body.name and req.body.content. Easy!
 
 ## Logging
 
@@ -35,11 +36,17 @@
 ## Error Handling
 
 - Writing error handlers:
+
   - Define error-handling middleware functions in the same way as other middleware functions, except error-handling functions have four arguments instead of three: (err, req, res, next). For example:
   - Example:
+
   ```
   app.use(function (err, req, res, next) {
   console.error(err.stack)
   res.status(500).send('Something broke!')
   })
   ```
+
+  ## Random Notes
+
+  - Slug is the part of a URL which identifies a particular page on a website in a form readable by users. It is usually a url-safe version, meaning it is the title without any spaces or special character.

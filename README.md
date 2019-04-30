@@ -226,3 +226,26 @@ Node, Express, Sequelize
   - Sequelize Rounding Out
 
 - Takeaways:
+
+### Week 3
+
+Single-Page Applications, React, Testing
+
+#### Day 1: Front-end Modules & Trip Planner
+
+- Reading:
+
+- Notes:
+
+- Takeaways:
+
+#### Day 2: Front-end Modules & Trip Planner
+
+- Reading:
+
+  - [React: All the Fundamental React Concepts Jammed Into This Single Medium Article](https://medium.freecodecamp.org/all-the-fundamental-react-js-concepts-jammed-into-this-single-medium-article-c83f9b53eac2)
+  - [React: The 5 Things You Need to Know to Understand React](https://medium.freecodecamp.org/the-5-things-you-need-to-know-to-understand-react-a1dbd5d114a3)
+
+- Notes:
+
+- Takeaways
