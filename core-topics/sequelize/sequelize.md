@@ -79,7 +79,7 @@ The following is a more in-depth review outline covering most everything that we
       - [Search operators](https://sequelize-guides.netlify.com/search-operators/), e.g. `$ne` and `$in`, for richer filtering
     - Standard model & instance methods for [Inserting, updating and destroying](https://sequelize-guides.netlify.com/inserting-updating-destroying/)
 
-## Associations cheat sheet
+## (Associations cheat sheet)[https://repl.it/@Farhuts/Table-associations]
 
 ### One To One **\*\***\*\***\*\***\*\***\*\***\*\***\*\***\*\*\*\***\*\***\*\***\*\***\*\***\*\***\*\***\*\***
 
@@ -131,7 +131,7 @@ it is and let it be a one-way association. But we want more! Let's define it the
 
 creating a many to many association in the next section:
 
-### Belongs-To-Many **\*\*\*\***\*\*\*\*******\*\*\*\*******
+### Belongs-To-Many **\*\*\*\***\*\*\*\***\*\***\*\*\*\***\*\***
 
 Belongs-To-Many associations are used to connect sources with multiple targets.
 
