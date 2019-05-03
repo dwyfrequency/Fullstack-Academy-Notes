@@ -236,11 +236,13 @@ Single-Page Applications, React, Testing
 - Reading:
 
 - Notes:
-  - `Promise.all` if we want to run many promises to execute in parallel, and wait till all of them are ready. For instance, download several URLs in parallel and process the content when all are done.
 
-The syntax is: `let promise = Promise.all([promises1, promise2, etc])`
+  - `Promise.all` if we want to run many promises to execute in parallel, and wait till all of them are ready. For instance, download several URLs in parallel and process the content when all are done.
+  - note relative order is the same. Even if the first promise takes the longest time to resolve, it is still first in the array of results.
+  - The syntax is: `let promise = Promise.all([promises1, promise2, etc])`
 
 - Takeaways:
+  - read this article [Promises API](https://javascript.info/promise-api)
 
 #### Day 2: Front-end Modules & Trip Planner
 

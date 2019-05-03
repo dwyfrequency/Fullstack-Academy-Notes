@@ -78,3 +78,71 @@ The following is a more in-depth review outline covering most everything that we
     - [Querying in general](https://sequelize-guides.netlify.com/querying/), including:
       - [Search operators](https://sequelize-guides.netlify.com/search-operators/), e.g. `$ne` and `$in`, for richer filtering
     - Standard model & instance methods for [Inserting, updating and destroying](https://sequelize-guides.netlify.com/inserting-updating-destroying/)
+
+## Associations cheat sheet
+
+### One To One **\*\***\*\***\*\***\*\***\*\***\*\***\*\***\*\*\*\***\*\***\*\***\*\***\*\***\*\***\*\***\*\***
+
+1. belongTo <- BelongsTo associations are associations where the foreign key for the one-to-one relation exists on the source model.
+
+<source> <target>
+
+Food.belongsTo(Puppy) // - going to add puppyId to the food table (source model), to hold the primary key value for Puppy
+
+By default the foreign key for a belongsTo relation will be generated from the target model name and the target primary key name.
+
+In cases where "as" has been defined it will be used in place of the target model name.
+
+Food.belongsTo(Puppy, {foreignKey: 'big_pups'}) // <=big_pups pls note an absence of Id
+
+Food.belongsTo(Puppy, {as: 'very_big_pups'}) // <=veryBigPupsId pls note a camel case
+
+2. HasOne
+
+HasOne associations are associations where the foreign key for the one-to-one relation exists on the target model.
+
+Puppy.hasOne(Food) // - going to add puppyId on the target model (Food table).
+
+Food.hasOne(Puppy) // - going to add foodId on the target model (Puppy table).
+
+Puppy.hasOne(Food, {foreignKey: 'food_lovers'}) // <=food_lovers on the target model (Food table).
+
+Puppy.hasOne(Food, {as: 'one_meal'}) // <=oneMealId
+
+### Difference between HasOne and BelongsTo **\*\***\*\*\*\***\*\***\*\*\***\*\***\*\*\*\***\*\***
+
+They are suitable for different scenarios. When we link two model in Sequelize we can refer them as pairs of source and target models.
+
+HasOne and BelongsTo insert the association key in different models from each other.
+
+HasOne inserts the association key in target model whereas BelongsTo inserts the association key in the source model.
+
+### One-To-Many **\*\*\*\***\*\*\*\***\*\*\*\***\***\*\*\*\***\*\*\*\***\*\*\*\***
+
+One-To-Many associations are connecting one source with multiple targets. The targets however are again
+
+connected to exactly one specific source.
+
+Puppy.hasMany(Food, {as: 'Meals'}) // - going to add puppyId on the target model (Food table)
+
+Instances of Puupy will get the accessors getMeals and setMeals. We could just leave it the way
+
+it is and let it be a one-way association. But we want more! Let's define it the other way around by
+
+creating a many to many association in the next section:
+
+### Belongs-To-Many **\*\*\*\***\*\*\*\*******\*\*\*\*******
+
+Belongs-To-Many associations are used to connect sources with multiple targets.
+
+Furthermore the targets can also have connections to multiple sources.
+
+Puppy.belongsToMany(Food, {through: 'puppiesFoods' })
+
+Food.belongsToMany(Puppy, {through: 'puppiesFoods' })
+
+This will create a new model called puppiesFoods with the equivalent foreign keys foodId and puppyId.
+
+This will add methods getFoods, setFoods, addFoods, addFoods to Puppy, and getPuppy, setPuppy,
+
+addPuppy, and addPuppy to Food.
