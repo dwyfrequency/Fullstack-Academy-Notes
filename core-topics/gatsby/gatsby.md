@@ -22,4 +22,39 @@ we could name it anything. The components will only be used when they are import
 
 Anytime we want to render a shared components, we should put it in this directory and import when needed
 
-## Creating Gatsbhy Page Layout
+## Creating Gatsby Page Layout
+
+Create a universal page layout - create higher order component named something like layout
+have this component wrap your components that will be featured on every page like
+a navbar and footer. Have your component render children ie anything nested between it
+
+```
+const Layout = props => {
+  return (
+    <div>
+      <Header />
+      {props.children}
+      <Footer />
+    </div>
+  )
+}
+```
+
+then wrap your pages with this component.
+
+## Plugins
+
+You can use gatsby plugins if you want to say configure it to use sass
+`npm install --save node-sass gatsby-plugin-sass`
+You can see all plugins on the gatsby site. After downloading, you must config gatsby.
+with file name `gatsby-config.js` in your projects root director `/`
+
+**Note** this will be a node.js file so we need to export it in module.exports
+
+```
+module.exports = {
+  plugins: ["gatsby-plugin-sass"],
+}
+```
+
+## Styling Your Pages
