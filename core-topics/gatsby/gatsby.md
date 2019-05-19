@@ -138,6 +138,7 @@ package.json
 ## Sourcing Content From Filesystem
 
 use pluggin `gatsby-source-filesystem`
+to transform markdown files in addition use pluggin `gatsby-transformer-remark`
 
 ```
 {
@@ -147,4 +148,10 @@ use pluggin `gatsby-source-filesystem`
         path: `${__dirname}/src/`,
       },
     },
+        "gatsby-transformer-remark",
+
 ```
+
+## Generate Slugs for Posts
+
+`gatsby-node.js` creating this file in your root proj folder. We can access gatsby's node APIs
