@@ -134,3 +134,17 @@ stop server and run command `npm install --save-dev env-cmd`
 
 package.json
 `"develop": "env-cmd -f .env.development gatsby develop",`
+
+## Sourcing Content From Filesystem
+
+use pluggin `gatsby-source-filesystem`
+
+```
+{
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "src",
+        path: `${__dirname}/src/`,
+      },
+    },
+```
