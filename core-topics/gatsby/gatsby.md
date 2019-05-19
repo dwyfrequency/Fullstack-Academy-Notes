@@ -58,3 +58,79 @@ module.exports = {
 ```
 
 ## Styling Your Pages
+
+create a `/styles` directory to store your css files
+
+## Using Css Modules with Gatsby
+
+css modules are included by default
+
+```
+import headerStyles from "./header.module.scss"
+...
+<Link to="/" className={headerStyles.link}>Main</Link>
+```
+
+`.link` corresponds to the className in our file
+`.nav-link` in our css will resolve to `navLink` in our js ie. `headerStyles.navLink`
+
+## Graphql with Gatsby
+
+Access with [link](http://localhost:8000/___graphql)
+
+If we add the below to our gatsby config
+`siteMetadata` for when you want to reuse common pieces of data across the site (for example, your site title), you can store that data in siteMetadata:
+
+gatsby-config.js
+
+```
+module.exports = {
+  siteMetadata: {
+    title: `Gatsby`,
+    siteUrl: `https://www.gatsbyjs.org`,
+    description: `Blazing fast modern site generator for React`,
+  },
+}
+```
+
+In graphiql editor, we can click through the docs on the right hand side. Docs > query > site > Site > siteMetadata. If you do not see the siteMetadata in the docs, restart the server
+
+sample query to grab our title
+
+```
+query {
+  site {
+    siteMetadata {
+      title
+    }
+  }
+}
+```
+
+```
+import {graphql, useStaticQuery } from "gatsby"
+const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    }
+  `)
+
+  <Link to="/" className={headerStyles.title}>
+    {data.site.siteMetadata.title}
+  </Link>
+```
+
+now we can access this dynamic data stored in our gatsby config
+
+to swap IDE for graphql - we can create an env variable
+file in root proj directory `.env.development` with content
+`GATSBY_GRAPHQL_IDE=playground`
+
+stop server and run command `npm install --save-dev env-cmd`
+
+package.json
+`"develop": "env-cmd -f .env.development gatsby develop",`
