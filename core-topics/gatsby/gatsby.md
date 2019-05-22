@@ -155,3 +155,52 @@ to transform markdown files in addition use pluggin `gatsby-transformer-remark`
 ## Generate Slugs for Posts
 
 `gatsby-node.js` creating this file in your root proj folder. We can access gatsby's node APIs
+
+Below we create a node that we can access in our graphql query
+
+```
+// inside gatsby-node.js
+const path = require("path")
+
+// this runs when the server starts
+module.exports.onCreateNode = ({ node, actions }) => {
+  // create a new node field.
+  const { createNodeField } = actions
+
+  if (node.internal.type === "MarkdownRemark") {
+    // returns the filename and removes the extension
+    const slug = path.basename(node.fileAbsolutePath, ".md")
+    // creates a new node field which we can see in our graphql query
+    createNodeField({
+      node,
+      name: "slug",
+      value: slug,
+    })
+  }
+}
+
+```
+
+```
+# inside graphql query
+query {
+  allMarkdownRemark{
+    edges {
+      node {
+        id
+        fields {
+          slug
+        }
+        frontmatter {
+          title
+          date
+        }
+      }
+    }
+  }
+}
+```
+
+## Adding images in our md and render it
+
+`npm i gatsby-plugin-sharp gatsby-remark-images gatsby-remark-relative-images`
