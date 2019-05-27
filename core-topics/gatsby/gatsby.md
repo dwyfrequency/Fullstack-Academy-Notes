@@ -204,3 +204,22 @@ query {
 ## Adding images in our md and render it
 
 `npm i gatsby-plugin-sharp gatsby-remark-images gatsby-remark-relative-images`
+
+## Querying images in gatsby proj
+
+...GatsbyImageSharpFixed - throws error in graphiql but works with actual gatsby
+
+```
+{
+  fixed: file(relativePath: { eq: "defaultBcg.jpeg" }) {
+      childImageSharp {
+        fixed(width: 300, height: 400) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+      id
+      size
+      relativePath
+    }
+}
+```
