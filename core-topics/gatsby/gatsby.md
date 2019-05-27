@@ -209,6 +209,8 @@ query {
 
 ...GatsbyImageSharpFixed - throws error in graphiql but works with actual gatsby
 
+specifying the width and height provides us with our image scaled to that size
+
 ```
 {
   fixed: file(relativePath: { eq: "defaultBcg.jpeg" }) {
@@ -223,3 +225,7 @@ query {
     }
 }
 ```
+
+For the fluid prop on the Img component from gatsby image, even if we specify a max-width in our graphql query, it will be the size of the parent container. The maxWidth arg just tells graphql to make the images closer to that size for easy loading. This is evident when you inspect the element.
+Under the hood, it is just creating a lot of copies of the image for easy loading.
+`<Img fluid={fluid.childImageSharp.fluid} />`
