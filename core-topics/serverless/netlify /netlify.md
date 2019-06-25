@@ -12,7 +12,7 @@ To fix the blank site issue on deploy, be sure to add
 [build]
 command = "gatsby build"
 functions = "functions"
-publish = "public"ç
+publish = "public"
 ```
 
 To get functions running `netlify dev` to build project with your functions
